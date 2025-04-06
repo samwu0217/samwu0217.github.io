@@ -2,131 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sam Wu | Personal Website</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #4a90e2;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #eaeaea;
-    }
-    .project, .experience, .volunteer {
-      margin-bottom: 1.5rem;
-    }
-    a {
-      color: #4a90e2;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Wu | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-  <header>
-    <h1>Sam Wu</h1>
-    <p>Mechanical Engineer | Control Systems | Sustainability Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Research Project</a>
-      <a href="#experience">Work Experience</a>
-      <a href="#volunteer">Volunteering</a>
-      <a href="#contact">Contact</a>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-600 text-white py-8 text-center">
+    <h1 class="text-4xl font-bold">Sam Wu</h1>
+    <p class="text-lg">Mechanical Engineer | Control Systems | Sustainability Enthusiast</p>
+    <nav class="mt-4">
+      <a href="about.html" class="mx-4 hover:underline">About</a>
+      <a href="projects.html" class="mx-4 hover:underline">Projects</a>
+      <a href="experience.html" class="mx-4 hover:underline">Work</a>
+      <a href="volunteer.html" class="mx-4 hover:underline">Volunteer</a>
+      <a href="contact.html" class="mx-4 hover:underline">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Sam Wu, a senior student from Power Mechanical Engineering, National Tsing Hua University.
-      My research interest mainly lies in control systems. My favorite sport is tennis.
-      My dream is to make a difference in the world through my own abilities.
-      Currently working as a Mechanical Engineering Intern at Logitech and serving as a Research Assistant at the Control & Micromanipulation Lab.
+  <section class="max-w-4xl mx-auto p-6 text-center">
+    <h2 class="text-2xl font-semibold mb-6">Welcome</h2>
+    <p class="mb-4">
+      Hi! I'm Sam Wu, a mechanical engineering student at National Tsing Hua University. Explore my website to learn more about my projects, work experience, and volunteer activities.
     </p>
-  </section>
-
-  <section id="projects">
-    <h2>Research Projects</h2>
-    <div class="project">
-      <h3>MEMS Gyroscope Interface Circuit</h3>
-      <p>
-        Designed driving and sensing circuits, built a custom rate table, and integrated mechatronic components into a standalone test system.
-      </p>
-    </div>
-    <div class="project">
-      <h3>Lane Prediction Model Training</h3>
-      <p>
-        Enhanced model accuracy by incorporating dropout layers and a warm-up training strategy.
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <a href="projects.html" class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-bold">Projects</h3>
+        <p>Explore my technical and research work.</p>
+      </a>
+      <a href="experience.html" class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-bold">Work Experience</h3>
+        <p>See where I've worked and what I've done.</p>
+      </a>
+      <a href="volunteer.html" class="bg-white shadow rounded-2xl p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-bold">Volunteer</h3>
+        <p>Giving back to the community through STEM.</p>
+      </a>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Work Experiences</h2>
-    <div class="experience">
-      <h3>Logitech – Mechanical Engineering Intern</h3>
-      <p><em>Mar 2025 – Present</em></p>
-      <p>Develop the next-generation mechanical keyboard designs.</p>
-    </div>
-    <div class="experience">
-      <h3>NTHU PME – Research Assistant, Control & Micromanipulation Lab</h3>
-      <p><em>Feb 2025 – Present</em></p>
-      <p>
-        Assisting in the research of magnetically-driven detection systems for automatic high-speed 3D scanning probe microscopy of live cells in aqueous solutions.
-      </p>
-    </div>
-  </section>
-
-  <section id="volunteer">
-    <h2>Volunteer Experience</h2>
-    <div class="volunteer">
-      <h3>NTHU Africa Volunteer Team</h3>
-      <p><em>2024</em></p>
-      <p>
-        <strong>Improved ICT education in Kenya, Tanzania, and Eswatini.</strong>
-        Delivered 264 refurbished computers and built 8 computer labs.
-        Taught local students how to use computers and supported digital literacy.
-      </p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:samwu0217@gmail.com">samwu0217@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/samwu0217" target="_blank">samwu0217</a></p>
-  </section>
-
-  <footer>
+  <footer class="text-center text-sm text-gray-600 py-4 bg-gray-200 mt-12">
     &copy; 2025 Sam Wu. All rights reserved.
   </footer>
-
 </body>
 </html>
