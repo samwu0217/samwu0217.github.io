@@ -10,7 +10,7 @@
   <header class="bg-blue-900 text-white py-4">
   <div class="max-w-4xl mx-auto px-6">
     <a href="index.html" class="text-2xl font-bold hover:underline block mb-2">Sam Wu</a>
-    <nav class="space-x-6 text-sm md:text-base">
+    <nav class="flex flex-wrap gap-x-6 text-sm md:text-base">
       <a href="projects.html" class="hover:underline">Research Experience</a>
       <a href="experience.html" class="hover:underline font-semibold">Work Experience</a>
       <a href="volunteer.html" class="hover:underline">Volunteering</a>
@@ -18,27 +18,14 @@
     </nav>
   </div>
 </header>
-
+  
   <main class="max-w-4xl mx-auto p-6 space-y-8">
+
     <!-- Project 1 -->
-    <section class="bg-white rounded-2xl shadow p-6">
-      <h2 class="text-xl font-bold mb-2">MEMS Gyroscope Interface Circuit</h2>
-      <p><img src="images/gyro_project.png" alt="Gyro Circuit" class="w-full h-auto rounded-lg mb-4">
-Designed driving and sensing circuits, built a custom rate table, and integrated mechatronic components into a standalone test system.</p>
-    </section>
-
-    <!-- Project 2 -->
-    <section class="bg-white rounded-2xl shadow p-6">
-      <h2 class="text-xl font-bold mb-2">Lane Prediction Model Training</h2>
-      <p><img src="images/lane_project.png" alt="Lane Prediction" class="w-full h-auto rounded-lg mb-4">
-Enhanced model accuracy by incorporating dropout layers and a warm-up training strategy.</p>
-    </section>
-
-    <!-- Project 3 -->
-    <section class="bg-white rounded-2xl shadow p-6">
+    <section>
       <h2 class="text-xl font-bold mb-1">4-DOF Robot Arm - Tower of Hanoi Project</h2>
       <p class="text-sm text-gray-600 mb-1 italic">Term Project – Robotics (PME 526000)</p>
-      <p class="italic text-sm mb-2">Advisor: <a href="https://www.pme.nthu.edu.tw/p/404-1380-113077.php" target="_blank" class="text-blue-600 underline">Dr. Ting-Jen Yeh</a></p>
+      <p class="italic text-sm mb-2">Advisor: <a href="https://pme.site.nthu.edu.tw/p/406-1308-180016,r4027.php?Lang=zh-tw" target="_blank" class="text-blue-600 underline">Dr. Ting-Jen Yeh</a></p>
       <p class="mb-4">
         This project focused on developing a robotic arm system capable of completing the Tower of Hanoi task through simulation and real-world execution. The robot arm was modeled in URDF and simulated in RViz with MoveIt for path planning and obstacle avoidance. A custom IK solver was developed to compute joint configurations for desired end-effector poses. The solution was validated both in simulation and on physical hardware, with real-time control achieved via serial communication with a microcontroller running embedded motor control logic.
       </p>
@@ -49,10 +36,65 @@ Enhanced model accuracy by incorporating dropout layers and a warm-up training s
         <strong>Keywords:</strong> ROS, robot arm, GPT-4o, OpenCV, computer vision, inverse kinematics
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-  <img src="images/8ea268b9-5ce4-4226-9c43-cced1c36202a.png" alt="Tower of Hanoi Robot Setup" class="rounded-lg shadow w-full h-64 object-cover">
-  <img src="images/c7dfd473-a99f-44bf-bb36-a2336f61fd18.png" alt="Robot Arm Simulation" class="rounded-lg shadow w-full h-64 object-cover">
-</div>
+        <img src="images/robot_1.jpg" class="rounded-lg shadow w-full h-64 object-cover">
+        <img src="images/robot_2.png" class="rounded-lg shadow w-full h-64 object-cover">
+      </div>
     </section>
+
+    <!-- Project 2 -->
+    <section>
+      <h2 class="text-xl font-bold mb-1">Lane Prediction Model Training</h2>
+      <p class="text-sm text-gray-600 mb-1 italic">Term Project – Introduction to Artificial Intelligence (PME 543900)</p>
+      <p class="italic text-sm mb-2">Advisor: <a href="https://icms.site.nthu.edu.tw/p/404-1529-203458.php" target="_blank" class="text-blue-600 underline">Dr. Jinn-Liang Liu</a></p>
+      <p class="mb-4">
+        This project aims to reduce data and computational requirements while achieving performance comparable to that of a pre-trained supercombo model for autonomous driving perception. A custom neural network architecture, ModelB6, is developed with convolutional and recurrent layers to extract spatial and temporal features from sequential driving video frames. To support multi-task learning—including path prediction, lane detection, and lead vehicle tracking—a composite loss function is formulated using multiple weighted mean squared errors (MSEs). Training is optimized with a cosine decay learning rate schedule with warm-up to enhance convergence stability.
+      </p>
+      <p class="mb-4">
+        The model is trained on a dataset of YUV-processed video sequences and evaluated through both quantitative loss metrics and visual overlay comparisons. A simulation framework is used to verify the predictions by rendering output trajectories and lane markers on input frames. Results demonstrate stable convergence and satisfactory accuracy across several outputs, though some targets show signs of underfitting or over-regularization. The proposed framework offers a lightweight yet effective solution for vision-based behavior prediction in autonomous driving systems.
+      </p>
+      <p class="text-sm text-gray-500 mb-4">
+        <strong>Keywords:</strong> Machine learning, lane prediction, CNNs, cosine learning rate decay
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="images/lane_1.png" class="w-full h-auto rounded-lg mb-4">
+      </div>
+    </section>
+
+    <!-- Project 3 -->
+    <section>
+      <h2 class="text-xl font-bold mb-1">Development of Interface Circuit for Piezoelectric Mode-Matched MEMS Gyroscope</h2>
+      <p class="text-sm text-gray-600 mb-1 italic">Capstone Project</p>
+      <p class="italic text-sm mb-2">Advisor: <a href="https://pme.site.nthu.edu.tw/p/406-1308-180024,r4027.php?Lang=zh-tw" target="_blank" class="text-blue-600 underline">Dr. Sheng-Shian Li</a></p>
+      <p class="mb-4">
+        This project presents the development of a compact, modular interface circuit for a piezoelectric mode-matched MEMS gyroscope, aiming to replace bulky commercial instruments with a portable and integrated solution. The system features a self-oscillating drive circuit based on the Barkhausen criterion to excite the primary resonant mode at 10 MHz using ambient noise. The sensing circuit implements a mixer-based quadrature demodulation scheme, followed by an active low-pass filter to extract the angular velocity signal while suppressing quadrature and high-frequency noise. Supporting circuits include a precision voltage regulator providing bipolar supplies and a custom-built motorized rate table that emulates single-axis rotation for on-bench testing.
+      </p>
+      <p class="mb-4">
+        The modular subsystems were verified individually and then connected for full system integration. Although signal attenuation due to impedance mismatch limited visibility on oscilloscopes, angular velocity signals were successfully observed using a spectrum analyzer. The system demonstrates the feasibility of low-cost, PCB-based signal processing for MEMS gyroscopes, offering potential for portable and scalable inertial sensing solutions.
+      </p>
+      <p class="text-sm text-gray-500 mb-4">
+        <strong>Keywords:</strong> MEMS gyroscope, interface circuit, quadrature demodulation, angular velocity sensing, PCB system integration
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="images/project_3.png" class="w-full h-auto rounded-lg mb-4">
+      </div>
+    </section>
+    
+    <!-- Project 4 -->
+    <section>
+      <h2 class="text-xl font-bold mb-1">Design a Low-Power Fully Differential CMOS Amplifier</h2>
+      <p class="text-sm text-gray-600 mb-1 italic">Term Project - Electronics II (PME 320200)</p>
+      <p class="italic text-sm mb-2">Advisor: <a href="https://pme.site.nthu.edu.tw/p/406-1308-180024,r4027.php?Lang=zh-tw" target="_blank" class="text-blue-600 underline">Dr. Sheng-Shian Li</a></p>
+      <p class="mb-4">
+        This project presents the design of a low-power, fully differential CMOS amplifier implemented in a 0.18 μm process, targeting high-precision analog applications. The amplifier architecture features an operational amplifier core with pseudo-resistors for input biasing and capacitors to define voltage gain. Transistors operating in the deep triode region are used to implement pseudo-resistors, enabling stable bias voltage control with minimal area and power consumption. Through iterative optimization of transistor sizing and compensation parameters, the design achieves a gain of 40.07 dB, a 3 dB bandwidth of 25.44 kHz, and a low total harmonic distortion (THD) of 0.4987%. While most design targets are met or exceeded, the power supply rejection ratio (PSRR) falls short at 50.4 dB due to the use of a resistor-based bias circuit. The proposed amplifier demonstrates excellent linearity, low input-referred noise (15.97 nV/√Hz), and strong common-mode rejection, making it suitable for low-noise analog front-end circuits. Further improvements are recommended through active biasing and enhanced CMFB design to improve PSRR and overall power efficiency.
+      </p>
+      <p class="text-sm text-gray-500 mb-4">
+        <strong>Keywords:</strong> CMOS analog design, fully differential amplifier, THD reduction, PSRR, CMRR
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="images/project_4.png" class="w-full h-auto rounded-lg mb-4">
+      </div>
+    </section>
+    
   </main>
 
   <footer class="text-center text-sm text-gray-600 py-4 bg-gray-200 mt-12">
