@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Volunteer Experience | Sam Wu</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <header class="bg-blue-600 text-white py-6 text-center">
-    <h1 class="text-3xl font-bold">Volunteer Experience</h1>
-    <nav class="mt-2">
-      <a href="index.html" class="mx-2 hover:underline">Home</a>
+  <header class="bg-blue-900 text-white py-4">
+  <div class="max-w-4xl mx-auto px-6">
+    <a href="index.html" class="text-2xl font-bold hover:underline block mb-2">Sam Wu</a>
+    <nav class="flex flex-wrap gap-x-6 text-sm md:text-base">
+      <a href="projects.html" class="hover:underline">Research Experience</a>
+      <a href="experience.html" class="hover:underline">Work Experience</a>
+      <a href="volunteer.html" class="hover:underline font-semibold">Volunteer Experience</a>
+      <a href="honors.html" class="hover:underline">Honors and Awards</a>
     </nav>
-  </header>
+  </div>
+</header>
+  
+  <main class="max-w-4xl mx-auto p-6 space-y-8">
 
-  <main class="max-w-4xl mx-auto p-6">
-    <div class="bg-white p-6 rounded-2xl shadow">
-      <h2 class="text-xl font-semibold">NTHU Africa Volunteer Team</h2>
-      <p class="text-gray-600 text-sm mb-2">2024</p>
-      <p>
-        Improved ICT education in Kenya, Tanzania, and Eswatini. Delivered 264 refurbished computers and built 8 computer labs. Taught local students how to use computers and supported digital literacy initiatives.
+    <!-- Volunteer Experience 1 -->
+    <section>
+      <h2 class="text-xl font-bold mb-1">An ICT education project in Africa</h2>
+      <p class="text-sm text-gray-600 mb-1 italic">Term Project – Robotics (PME 526000)</p>
+      <p class="italic text-sm mb-2">Advisor: <a href="https://pme.site.nthu.edu.tw/p/406-1308-180016,r4027.php?Lang=zh-tw" target="_blank" class="text-blue-600 underline">Dr. Ting-Jen Yeh</a></p>
+      <p class="mb-4">
+        This project focused on developing a robotic arm system capable of completing the Tower of Hanoi task through simulation and real-world execution. The robot arm was modeled in URDF and simulated in RViz with MoveIt for path planning and obstacle avoidance. A custom IK solver was developed to compute joint configurations for desired end-effector poses. The solution was validated both in simulation and on physical hardware, with real-time control achieved via serial communication with a microcontroller running embedded motor control logic.
       </p>
-    </div>
+      <p class="mb-4">
+        Current work emphasizes the integration of a GPT-based natural language interface and a computer vision module utilizing OpenCV, enabling the robot to interpret verbal instructions and recognize objects based on shape and position. This multimodal approach lays the foundation for autonomous object manipulation through intuitive human-robot interaction.
+      </p>
+      <p class="text-sm text-gray-500 mb-4">
+        <strong>Keywords:</strong> ROS, robot arm, GPT-4o, OpenCV, computer vision, inverse kinematics
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="images/robot_1.jpg" class="rounded-lg shadow w-full h-64 object-cover">
+        <img src="images/robot_2.png" class="rounded-lg shadow w-full h-64 object-cover">
+      </div>
+    </section>
+    
   </main>
 
   <footer class="text-center text-sm text-gray-600 py-4 bg-gray-200 mt-12">
