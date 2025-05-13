@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Sam Wu</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -10,21 +10,41 @@
   <header class="bg-blue-600 text-white py-6 text-center">
     <h1 class="text-3xl font-bold">Projects</h1>
     <nav class="mt-2">
-      <a href="index.html" class="mx-2 hover:underline">Home</a>
+      <a href="index.html" class="text-white underline">Home</a>
     </nav>
   </header>
 
-  <main class="max-w-6xl mx-auto p-6">
-    <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h2 class="text-xl font-semibold mb-2">MEMS Gyroscope Interface Circuit</h2>
-        <p>Designed driving and sensing circuits, built a custom rate table, and integrated mechatronic components into a standalone test system.</p>
+  <main class="max-w-3xl mx-auto p-6 space-y-8">
+    <!-- Project 1 -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-bold mb-2">MEMS Gyroscope Interface Circuit</h2>
+      <p>Designed driving and sensing circuits, built a custom rate table, and integrated mechatronic components into a standalone test system.</p>
+    </section>
+
+    <!-- Project 2 -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-bold mb-2">Lane Prediction Model Training</h2>
+      <p>Enhanced model accuracy by incorporating dropout layers and a warm-up training strategy.</p>
+    </section>
+
+    <!-- Project 3 -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-bold mb-1">4-DOF Robot Arm - Tower of Hanoi Project</h2>
+      <p class="italic text-sm mb-2">Advisor: Dr. Ting-Jen Yeh</p>
+      <p class="mb-4">
+        This project focused on developing a robotic arm system capable of completing the Tower of Hanoi task through simulation and real-world execution. The robot arm was modeled in URDF and simulated in RViz with MoveIt for path planning and obstacle avoidance. A custom IK solver was developed to compute joint configurations for desired end-effector poses. The solution was validated both in simulation and on physical hardware, with real-time control achieved via serial communication with a microcontroller running embedded motor control logic.
+      </p>
+      <p class="mb-4">
+        Current work emphasizes the integration of a GPT-based natural language interface and a computer vision module utilizing OpenCV, enabling the robot to interpret verbal instructions and recognize objects based on shape and position. This multimodal approach lays the foundation for autonomous object manipulation through intuitive human-robot interaction.
+      </p>
+      <p class="text-sm text-gray-500 mb-4">
+        <strong>Keywords:</strong> ROS, robot arm, GPT-4o, OpenCV, computer vision, inverse kinematics
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="images/8ea268b9-5ce4-4226-9c43-cced1c36202a.png" alt="Tower of Hanoi Robot Setup" class="rounded-lg shadow">
+        <img src="images/c7dfd473-a99f-44bf-bb36-a2336f61fd18.png" alt="Robot Arm Simulation" class="rounded-lg shadow">
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h2 class="text-xl font-semibold mb-2">Lane Prediction Model Training</h2>
-        <p>Enhanced model accuracy by incorporating dropout layers and a warm-up training strategy.</p>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer class="text-center text-sm text-gray-600 py-4 bg-gray-200 mt-12">
